@@ -28,13 +28,18 @@ Install NeoVim:
     ```
 
 To install VimPlug run:
-` curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-`
+    ```
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    ```
 
 ## Install Python & Node support
-`pip install pynvim`
+    ```
+    pip install pynvim
+    ```
 
-`npm i -g neovim` NOTE: You may need to run this command with `sudo`
+    ```npm i -g neovim``` 
+
+NOTE: You may need to run this command with `sudo`
 
 ## Organization
 To help make things more organized, each "task" is in its own directory
@@ -54,7 +59,6 @@ If you would like to add more plugins simply follow these steps:
     - Note: My file has an autoload function when opening Nvim, so 
     you may not have to run that command explicitly
 
-
 ## Adding Themes
 We all have different opinions on the *best* theme and can be done following
 the steps below.
@@ -63,6 +67,16 @@ the steps below.
 3. Save and quit
 4. Make any plugin specifc configurations in `./themes/``<name of theme>.vim` and source in
 `./init.vim`
+
+## Adding/Changing the Key Mappings
+All the key mappings are sourced through `init.vim` and can be easily remapped
+in the 
+    ```
+    ./keys/ 
+    ```
+directory. 
+
+For help learning how to map keys check out this [article](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed).
 
 ## Notable Syntax Support
 - Highlighted Text
