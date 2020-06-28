@@ -27,9 +27,6 @@ Install NeoVim:
     sudo pacman -S neovim
     ```
 
-I chose to go with **VimPlug** and it has been working really
-nicely thus far. 
-
 To install VimPlug run:
 ` curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 `
@@ -42,7 +39,6 @@ To install VimPlug run:
 ## Organization
 To help make things more organized, each "task" is in its own directory
 and then sourced from that directory in the `init.vim` file.       
-    - 
 
 Being able to read code/text documents is really helpful and when dealing
 with HTML tag auto-closing is amazing. 
