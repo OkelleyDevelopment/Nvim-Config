@@ -94,9 +94,18 @@ some secondary language servers may be needed. I recommend installing and
 adding them your `coc-settings.json` file, as suggested by [Chris](https://www.chrisatmachine.com/).
 
 Example:
-- Rust
+- Bash
 
-![Nikolai Config](./util/rust.png)
+![Nikolai Config](./util/bash.png)
+
+## Additional Language Support 
+Since the Rust lang server was not working we decided to remove it from 
+the `coc-settings.json` file.
+
+Instead run this command:
+    ```
+    :CocInstall coc-rust-analyzer
+    ```
 
 ## TODO
 - More Language Support
