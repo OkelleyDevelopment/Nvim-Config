@@ -31,15 +31,6 @@
         "v": "open:vsplit"
     },
     "languageserver": {
-        "rust": {
-            "command": "rust-analyzer",
-            "filetypes": [
-                "rust"
-            ],
-            "rootPatterns": [
-                "Cargo.toml"
-            ]
-        },
         "bash": {
             "command": "bash-language-server",
             "args": [
