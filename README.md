@@ -102,7 +102,7 @@ Example:
 Since the Rust lang server was not working we decided to remove it from 
 the `coc-settings.json` file.
 
-Instead run this command:
+Instead run this command inside Neovim:
     ```
     :CocInstall coc-rust-analyzer
     ```
