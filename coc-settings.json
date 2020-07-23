@@ -8,7 +8,8 @@
         "yaml",
         "json",
         "rust",
-        "python"
+        "python",
+        "java"
     ],
     // python config
     "python.linting.enabled": true,
@@ -29,19 +30,5 @@
             "open"
         ],
         "v": "open:vsplit"
-    },
-    "languageserver": {
-        "bash": {
-            "command": "bash-language-server",
-            "args": [
-                "start"
-            ],
-            "filetypes": [
-                "sh"
-            ],
-            "ignoredRootPaths": [
-                "~"
-            ]
-        }
     }
 }
