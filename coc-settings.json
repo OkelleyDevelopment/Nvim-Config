@@ -1,34 +1,30 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": [
-        "css",
-        "markdown",
-        "javascript",
-        "graphql",
-        "html",
-        "yaml",
-        "json",
-        "rust",
-        "python",
-        "java"
-    ],
-    // python config
-    "python.linting.enabled": true,
-    "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true,
-    "snippets.ultisnips.directories": [
-        "UltiSnips",
-        "~/.config/nvim/utils/snips"
-    ],
-    // explorer
-    // Found this at chris@machine 
-    "explorer.width": 30,
-    "explorer.previewAction.onHover": false,
-    "explorer.keyMappings": {
-        "<cr>": [
-            "expandable?",
-            "expand",
-            "open"
-        ],
-        "v": "open:vsplit"
-    }
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "rust",
+    "python",
+    "java"
+  ],
+
+  // python config
+  "python.linting.enabled": true,
+  "python.jediEnabled": false,
+  "python.linting.pylintEnabled": true,
+
+  // Snippets
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+
+  // explorer
+  "explorer.width": 30,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  }
 }
