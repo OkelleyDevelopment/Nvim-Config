@@ -5,16 +5,17 @@
 ## Motovation
 
 As a first time edeavor, this configuration is fairly simple and it is meant
-to be that way.
+to be that way while still offering some gnarly features.
 
-I liked NeoVim for the simplicity, but wanted a few extra "addons" to improve
-my quality of life (such as tag completion). This process also helped me
-learn about how defining shortcuts for vim/nvim work and the power of setting
-up various buffers to switch between files. Another feature that was super
-helpful was the TAB completion of snipets/file names/paths.
+I liked NeoVim for the simplicity, but wanted a few "addons" to improve
+my quality of life (such as HTML tag completion).
 
-This will continue to be updated as I shift my workflow and find what works
-best for my development workflow.
+This process also helped me learn about how defining shortcuts for vim/nvim work
+and the power of setting up various buffers to switch between files. Another
+feature that was super helpful was the `TAB` completion of snipets/file names and paths.
+
+This will continue to be evolve as I shift my workflow and fine tune each individual
+aspect of this development workflow.
 
 ## Prerequisites
 
@@ -25,25 +26,16 @@ View the complete listing [here](./util/info/prereq.md)
 Now that we have some of the needed tools for this config, which will also be
 useful for development purposes, we can clone the repo.
 
-Follow [this](./util/info/setup.md) markdown file for instructions.
+Follow this [setup](./util/info/setup.md) markdown file for instructions.
 
 ## Enable the PlugIns
 
-Inside the `/.config/nvim/` directory, open the file `./vim-plug/plugins.vim` and then run the command:
-
-```vim
-:PlugInstall
-```
-
-Once done, this will allow the plugins to begin working on reload. A few require coc installs and will be listsed below.
-
-### CocInstall
-
-To enable all (or some) of the syntax support click [here](./util/info/coc_setup.md) for instructions.
+Follow [coc_setup.md](./util/info/coc_setup.md) for the instructions on setting up
+the plugins.
 
 ## Notable Syntax Support
 
-With the above CocInstalls and plugins installed, you will have:
+With the above Plugins and coc services installed, you will have:
 
 - Highlighted Text
 - CSS preview
@@ -64,36 +56,17 @@ plugins much _easier to maintain_.
 
 ## Adding Plugins
 
-If you would like to add more plugins simply follow these steps:
-
-1. Locate the plugins `Plug` command
-2. Add it to the file in `./vim-plug/plugins.vim`
-3. Save and quit
-4. Make any plugin specifc configurations in `./plug-config/` and source in
-   `./init.vim`
-5. Then run the command `:PlugInstall`
-   - Note: My file has an autoload function when opening Nvim, so
-     you may not have to run that command explicitly
+If you would like to add more plugins simply follow the steps [here](./util/info/add_plugins.md)
 
 ## Adding Themes
 
 We all have different opinions on the _best_ theme and can be done following
-the steps below.
-
-1. Locate the `Plug` command for the theme
-2. Add it to the file in `./vim-plug/plugins.vim`
-3. Save and quit
-4. Make any plugin specifc configurations in ` ./themes/``<name of theme>.vim ` and source in
-   `./init.vim`
+the steps [here](./util/info/add_themes.md)
 
 ## Adding/Changing the Key Mappings
 
-All the key mappings are sourced through `init.vim` and can be easily remapped
-in the
-`./keys/`
-directory.
-
-For help learning how to map keys check out this [article](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed).
+Some of my key mappings might not be what you need and can easily be changed
+by looking at the steps [here](./util/info/key_mapping.md)
 
 ## Custom Snippets
 
@@ -114,7 +87,6 @@ github.
 
 ## TODO
 
-- More Language Support
 - Custom theme with similar color scheme to Nord
 - Spell Checker
 - Shell script to install the needed dependancies
