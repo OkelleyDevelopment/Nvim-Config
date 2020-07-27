@@ -25,7 +25,7 @@ View the complete listing [here](./util/info/prereq.md)
 Now that we have some of the needed tools for this config, which will also be
 useful for development purposes, we can clone the repo.
 
-Follow this [setup](./util/info/setup.md) markdown file for instructions.
+Follow this initial [setup](./util/info/setup.md) markdown file for instructions.
 
 ## Enable the PlugIns
 
