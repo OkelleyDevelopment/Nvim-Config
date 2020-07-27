@@ -18,85 +18,14 @@ best for my development workflow.
 
 ## Prerequisites
 
-Install NeoVim:
-
-- Ubuntu
-  ```bash
-  sudo apt install neovim
-  ```
-
-Install Node Package Manager
-
-```sh
-sudo apt install npm
-```
-
-Install Pip
-
-```sh
-sudo apt install python3-pip
-```
-
-Install Python & Node support:
-
-```sh
- pip install pynvim
-```
-
-```sh
-  npm i -g neovim
-```
-
-Install GIT Version Control:
-
-```sh
-sudo apt install git
-```
-
-Install cURL:
-
-```sh
-sudo apt install curl
-```
-
-Install VimPlug:
-
-```bash
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-Install Clang:
-
-```bash
-sudo apt install clang
-```
-
-NOTE: You may need to run this command with `sudo`
+View the complete listing [here](./util/info/prereq.md)
 
 ## Setting up the Config
 
 Now that we have some of the needed tools for this config, which will also be
 useful for development purposes, we can clone the repo.
 
-Inside the `~/.config/` directory, run the command:
-
-```sh
-mkdir nvim
-```
-
-Now run:
-
-```bash
-git clone https://github.com/OkelleyDevelopment/Nvim-Configs.git
-```
-
-Then:
-
-```bash
-mv ~/.config/Nvim-Configs/* ~/.config/nvim/
-```
-
-Ensure the `.git` folder moved over too and you will have the needed assests.
+Follow [this](./util/info/setup.md) markdown file for instructions.
 
 ## Enable the PlugIns
 
@@ -110,39 +39,7 @@ Once done, this will allow the plugins to begin working on reload. A few require
 
 ### CocInstall
 
-Run the command inside Neovim:
-
-```
-:CocInstall
-```
-
-followed by any/all the following
-
-- coc-yaml
-- coc-tsserver
-- coc-tslint
-- coc-sh
-- coc-rls
-- coc-python
-- coc-java
-- coc-html
-- coc-explorer
-- coc-css
-- coc-clnagd
-- coc-prettier
-- coc-snippets
-
-NOTE: If you wish to see what CoC extensions exist run this:
-
-```
-:CocInstall coc-marketplace
-```
-
-then run:
-
-```
-:CocList marketplace
-```
+To enable all (or some) of the syntax support click [here](./util/info/coc_setup.md) for instructions.
 
 ## Notable Syntax Support
 
@@ -162,8 +59,8 @@ With the above CocInstalls and plugins installed, you will have:
 To help make things more organized, each "task" is in its own directory
 and then sourced from that directory in the `init.vim` file.
 
-Being able to read code/text documents is really helpful and when dealing
-with HTML tag auto-closing is amazing.
+This pattern will make adding new plugins and or configurations to existing
+plugins much _easier to maintain_.
 
 ## Adding Plugins
 
@@ -203,7 +100,7 @@ For help learning how to map keys check out this [article](https://medium.com/vi
 This is easily one of the coolest parts of this setup. Coc-snippets allows the user
 to have access to a wide range of code snippets (common ops in the langs).
 
-Check [this](https://open.spotify.com/track/100lHmeZbp3OvinYgotmVc?si=trfxU5PdR9Ctps8t1QZ3ow) link to learn more.
+Check [this](https://github.com/neoclide/coc-snippets) link to learn more.
 
 If you want to create your own snippets, add a file in the `./snips/` directory
 with the following naming scheme:
