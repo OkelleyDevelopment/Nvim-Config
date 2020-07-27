@@ -1,5 +1,7 @@
 # Nikolai's Nvim Configuration
 
+![Nikolai Config](./util/title.png)
+
 ## Motovation
 
 As a first time edeavor, this configuration is fairly simple and it is meant
@@ -63,6 +65,12 @@ Install VimPlug:
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+Install Clang:
+
+```bash
+sudo apt install clang
+```
+
 NOTE: You may need to run this command with `sudo`
 
 ## Setting up the Config
@@ -122,6 +130,7 @@ followed by any/all the following
 - coc-css
 - coc-clnagd
 - coc-prettier
+- coc-snippets
 
 NOTE: If you wish to see what CoC extensions exist run this:
 
@@ -129,7 +138,7 @@ NOTE: If you wish to see what CoC extensions exist run this:
 :CocInstall coc-marketplace
 ```
 
-then
+then run:
 
 ```
 :CocList marketplace
@@ -189,30 +198,26 @@ directory.
 
 For help learning how to map keys check out this [article](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed).
 
-## Language Servers
+## Custom Snippets
 
-CoC does not support all languages in their extensions, so installing
-some secondary language servers may be needed. I recommend installing and
-adding them your `coc-settings.json` file, as suggested by [Chris](https://www.chrisatmachine.com/).
+This is easily one of the coolest parts of this setup. Coc-snippets allows the user
+to have access to a wide range of code snippets (common ops in the langs).
 
-Example:
+Check [this](https://open.spotify.com/track/100lHmeZbp3OvinYgotmVc?si=trfxU5PdR9Ctps8t1QZ3ow) link to learn more.
 
-- Bash
+If you want to create your own snippets, add a file in the `./snips/` directory
+with the following naming scheme:
 
-![Nikolai Config](./util/bash.png)
+```
+<language name goes here>.snippets
+```
 
-## Additional Language Support
-
-Since the Rust lang server was not working we decided to remove it from
-the `coc-settings.json` file.
-
-Instead run this command inside Neovim:
-`:CocInstall coc-rust-analyzer`
+Then adding the snippet is a matter of following the instructions on the coc-snippets
+github.
 
 ## TODO
 
 - More Language Support
 - Custom theme with similar color scheme to Nord
-- Snippets
 - Spell Checker
 - Shell script to install the needed dependancies

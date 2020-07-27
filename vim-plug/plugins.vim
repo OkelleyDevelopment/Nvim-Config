@@ -33,7 +33,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     " making stuff
     Plug 'neomake/neomake'
-     
+
+    " Vim Snippets
+    Plug 'honza/vim-snippets'
+
     "--------- Color-schemes -----------
     " Themes 
     Plug 'joshdick/onedark.vim'
