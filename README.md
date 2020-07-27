@@ -5,16 +5,15 @@
 ## Motovation
 
 As a first time edeavor, this configuration is fairly simple and it is meant
-to be that way while still offering some gnarly features.
-
-I liked NeoVim for the simplicity, but wanted a few "addons" to improve
-my quality of life (such as HTML tag completion).
+to be that way while still offering some gnarly features. I liked NeoVim for
+the simplicity, but wanted a few "addons" to improve my quality of life
+(such as HTML tag completion).
 
 This process also helped me learn about how defining shortcuts for vim/nvim work
 and the power of setting up various buffers to switch between files. Another
 feature that was super helpful was the `TAB` completion of snipets/file names and paths.
 
-This will continue to be evolve as I shift my workflow and fine tune each individual
+NOTE: This will continue to be evolve as I shift my workflow and fine tune each individual
 aspect of this development workflow.
 
 ## Prerequisites
