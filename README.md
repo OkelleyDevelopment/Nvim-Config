@@ -1,143 +1,41 @@
 # Nikolai's Nvim Configuration
 
+![Nikolai Config](./util/title.png)
+
 ## Motovation
 
 As a first time edeavor, this configuration is fairly simple and it is meant
-to be that way.
+to be that way while still offering some gnarly features.
 
-I liked NeoVim for the simplicity, but wanted a few extra "addons" to improve
-my quality of life (such as tag completion). This process also helped me
-learn about how defining shortcuts for vim/nvim work and the power of setting
-up various buffers to switch between files. Another feature that was super
-helpful was the TAB completion of snipets/file names/paths.
+I liked NeoVim for the simplicity, but wanted a few "addons" to improve
+my quality of life (such as HTML tag completion).
 
-This will continue to be updated as I shift my workflow and find what works
-best for my development workflow.
+This process also helped me learn about how defining shortcuts for vim/nvim work
+and the power of setting up various buffers to switch between files. Another
+feature that was super helpful was the `TAB` completion of snipets/file names and paths.
+
+This will continue to be evolve as I shift my workflow and fine tune each individual
+aspect of this development workflow.
 
 ## Prerequisites
 
-Install NeoVim:
-
-- Ubuntu
-  ```bash
-  sudo apt install neovim
-  ```
-
-Install Node Package Manager
-
-```sh
-sudo apt install npm
-```
-
-Install Pip
-
-```sh
-sudo apt install python3-pip
-```
-
-Install Python & Node support:
-
-```sh
- pip install pynvim
-```
-
-```sh
-  npm i -g neovim
-```
-
-Install GIT Version Control:
-
-```sh
-sudo apt install git
-```
-
-Install cURL:
-
-```sh
-sudo apt install curl
-```
-
-Install VimPlug:
-
-```bash
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-NOTE: You may need to run this command with `sudo`
+View the complete listing [here](./util/info/prereq.md)
 
 ## Setting up the Config
 
 Now that we have some of the needed tools for this config, which will also be
 useful for development purposes, we can clone the repo.
 
-Inside the `~/.config/` directory, run the command:
-
-```sh
-mkdir nvim
-```
-
-Now run:
-
-```bash
-git clone https://github.com/OkelleyDevelopment/Nvim-Configs.git
-```
-
-Then:
-
-```bash
-mv ~/.config/Nvim-Configs/* ~/.config/nvim/
-```
-
-Ensure the `.git` folder moved over too and you will have the needed assests.
+Follow this [setup](./util/info/setup.md) markdown file for instructions.
 
 ## Enable the PlugIns
 
-Inside the `/.config/nvim/` directory, open the file `./vim-plug/plugins.vim` and then run the command:
-
-```vim
-:PlugInstall
-```
-
-Once done, this will allow the plugins to begin working on reload. A few require coc installs and will be listsed below.
-
-### CocInstall
-
-Run the command inside Neovim:
-
-```
-:CocInstall
-```
-
-followed by any/all the following
-
-- coc-yaml
-- coc-tsserver
-- coc-tslint
-- coc-sh
-- coc-rls
-- coc-python
-- coc-java
-- coc-html
-- coc-explorer
-- coc-css
-- coc-clnagd
-- coc-prettier
-
-NOTE: If you wish to see what CoC extensions exist run this:
-
-```
-:CocInstall coc-marketplace
-```
-
-then
-
-```
-:CocList marketplace
-```
+Follow [coc_setup.md](./util/info/coc_setup.md) for the instructions on setting up
+the plugins.
 
 ## Notable Syntax Support
 
-With the above CocInstalls and plugins installed, you will have:
+With the above Plugins and coc services installed, you will have:
 
 - Highlighted Text
 - CSS preview
@@ -153,66 +51,42 @@ With the above CocInstalls and plugins installed, you will have:
 To help make things more organized, each "task" is in its own directory
 and then sourced from that directory in the `init.vim` file.
 
-Being able to read code/text documents is really helpful and when dealing
-with HTML tag auto-closing is amazing.
+This pattern will make adding new plugins and or configurations to existing
+plugins much _easier to maintain_.
 
 ## Adding Plugins
 
-If you would like to add more plugins simply follow these steps:
-
-1. Locate the plugins `Plug` command
-2. Add it to the file in `./vim-plug/plugins.vim`
-3. Save and quit
-4. Make any plugin specifc configurations in `./plug-config/` and source in
-   `./init.vim`
-5. Then run the command `:PlugInstall`
-   - Note: My file has an autoload function when opening Nvim, so
-     you may not have to run that command explicitly
+If you would like to add more plugins simply follow the steps [here](./util/info/add_plugins.md)
 
 ## Adding Themes
 
 We all have different opinions on the _best_ theme and can be done following
-the steps below.
-
-1. Locate the `Plug` command for the theme
-2. Add it to the file in `./vim-plug/plugins.vim`
-3. Save and quit
-4. Make any plugin specifc configurations in ` ./themes/``<name of theme>.vim ` and source in
-   `./init.vim`
+the steps [here](./util/info/add_themes.md)
 
 ## Adding/Changing the Key Mappings
 
-All the key mappings are sourced through `init.vim` and can be easily remapped
-in the
-`./keys/`
-directory.
+Some of my key mappings might not be what you need and can easily be changed
+by looking at the steps [here](./util/info/key_mapping.md)
 
-For help learning how to map keys check out this [article](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed).
+## Custom Snippets
 
-## Language Servers
+This is easily one of the coolest parts of this setup. Coc-snippets allows the user
+to have access to a wide range of code snippets (common ops in the langs).
 
-CoC does not support all languages in their extensions, so installing
-some secondary language servers may be needed. I recommend installing and
-adding them your `coc-settings.json` file, as suggested by [Chris](https://www.chrisatmachine.com/).
+Check [this](https://github.com/neoclide/coc-snippets) link to learn more.
 
-Example:
+If you want to create your own snippets, add a file in the `./snips/` directory
+with the following naming scheme:
 
-- Bash
+```
+<language name goes here>.snippets
+```
 
-![Nikolai Config](./util/bash.png)
-
-## Additional Language Support
-
-Since the Rust lang server was not working we decided to remove it from
-the `coc-settings.json` file.
-
-Instead run this command inside Neovim:
-`:CocInstall coc-rust-analyzer`
+Then adding the snippet is a matter of following the instructions on the coc-snippets
+github.
 
 ## TODO
 
-- More Language Support
 - Custom theme with similar color scheme to Nord
-- Snippets
 - Spell Checker
 - Shell script to install the needed dependancies
