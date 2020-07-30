@@ -2,7 +2,7 @@
 
 ![Nikolai Config](./util/title.png)
 
-## Motovation
+## Motivation
 
 As a first time edeavor, this configuration is fairly simple and it is meant
 to be that way while still offering some gnarly features. I liked NeoVim for
