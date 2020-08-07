@@ -1,6 +1,6 @@
 # Nikolai's Nvim Configuration
 
-![Nikolai Config](./util/title.png)
+![Nikolai Config](./util/images/title.png)
 
 ## Motivation
 
