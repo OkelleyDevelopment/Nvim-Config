@@ -1,9 +1,8 @@
 #!/bin/bash
 
 promptPipInstall() { \
-    echo "pip not found"
-    echo "Please install pip3 before continuing..."
-    exit
+    echo "pip not found. Installing now..."
+    sudo apt install python3-pip -y
 } 
 
 installplugs() { \
@@ -16,11 +15,19 @@ installplugs() { \
 }
 
 promptNodeInstall() { \
-    echo "node not found"
-    echo -n "Would you like to install node now "
+    echo "NodeJS not found"
+    echo -n "Would you like to install node now (y/n)?"
     read answer
     [ "$answer" != "${answer#[Yy]}" ] && installNode && installcocextensions
 
+}
+
+installNode() { \
+    echo "Installing nodejs..."
+    sudo apt install nodejs -y
+    sudo apt install npm -y
+
+    sudo npm i -g neovim
 }
 
 installpynvim(){ \
@@ -40,15 +47,16 @@ installcocextensions() { \
   [ ! -f package.json ] && echo '{"dependencies":{}}'> package.json
   # Change extension names to the extensions you need
   # sudo npm install coc-explorer coc-snippets coc-json coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  sudo npm install coc-explorer coc-snippets coc-json coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  sudo npm install coc-prettier coc-html coc-rust-analyzer coc-sh coc-tslint coc-python coc-css coc-yaml coc-tsserver coc-explorer coc-snippets coc-json coc-marketplace coc-java coc-clangd --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 }
 
 cloneNvimConfig() { \
-
     echo "Cloning Nikolai's Nvim Configuration"
     git clone https://github.com/OkelleyDevelopment/Nvim-Configs ../configTest/
 }
 
+# Clear the screen
+clear
 # Welcome to the Grid
 echo "Installing Nikolai's Nvim Configuration"
 
@@ -61,7 +69,9 @@ which node > /dev/null && echo "NodeJS installed, moving on..." || promptNodeIns
 pip3 list | grep pynvim > /dev/null && echo "Pynvim installed, moving on..." || installpynvim
 
 # move old nvim directory if it exists
-[ -d "$HOME/.config/nvim" ] && moveOldNvim
+[ -d "$HOME/.config/nvim" ] && moveOldConfig
+
+clear
 
 # Clone the repo down
 cloneNvimConfig
@@ -79,4 +89,4 @@ installcocextensions
 echo "Recommend running :checkHealth inside nvim to make sure everything is working"
 
 # Closing remark
-echo "The installation has finished, thank you."
+echo "This installation has finished"
