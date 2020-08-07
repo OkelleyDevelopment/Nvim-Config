@@ -7,18 +7,16 @@ promptPipInstall() { \
 
 installplugs() { \
   mv $HOME/.config/nvim/init.vim $HOME/.config/nvim/init.vim.tmp
-  mv $HOME/.config/nvim/utils/init.vim $HOME/.config/nvim/init.vim
+  mv $HOME/.config/nvim/util/init.vim $HOME/.config/nvim/init.vim
   echo "Installing plugins..."
   nvim --headless +PlugInstall +qall > /dev/null 2>&1
-  mv $HOME/.config/nvim/init.vim $HOME/.config/nvim/utils/init.vim
+  mv $HOME/.config/nvim/init.vim $HOME/.config/nvim/util/init.vim
   mv $HOME/.config/nvim/init.vim.tmp $HOME/.config/nvim/init.vim
 }
 
 promptNodeInstall() { \
-    echo "NodeJS not found"
-    echo -n "Would you like to install node now (y/n)?"
-    read answer
-    [ "$answer" != "${answer#[Yy]}" ] && installNode && installcocextensions
+    echo "NodeJS not found, installing now..."
+    installNode && installcocextensions
 
 }
 
