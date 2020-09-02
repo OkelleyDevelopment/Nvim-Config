@@ -16,6 +16,7 @@ source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/airline.vim
 
 " Extra Stuff
+source $HOME/.config/nvim/plug-config/vimtex.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
