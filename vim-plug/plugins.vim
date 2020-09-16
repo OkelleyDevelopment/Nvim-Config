@@ -27,7 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Which-key
-    Plug 'liuchengxu/vim-which-key'
+    "Plug 'liuchengxu/vim-which-key'
     " Status Line
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
@@ -37,10 +37,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neomake/neomake'
     " Vim Snippets
     Plug 'honza/vim-snippets'
+    " A Vim Plugin for Lively Previewing LaTeX PDF Output
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
     "--------- Color-schemes -----------
     " Themes 
-    Plug 'joshdick/onedark.vim'
+    "Plug 'joshdick/onedark.vim'
     "Add some color
     Plug 'junegunn/rainbow_parentheses.vim'
   
