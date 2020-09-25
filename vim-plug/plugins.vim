@@ -18,14 +18,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Plugin to deal with URL Highlight URLs inside vim
     Plug 'itchyny/vim-highlighturl'
-    "Displays a preview of colors with CSS
+    " Displays a preview of colors with CSS
     Plug 'ap/vim-css-color'
+    " LaTeX Support
+    Plug 'lervag/vimtex'
 
     "-------- Tools ---------
-      " Intellisense
+    " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Which-key
-    Plug 'liuchengxu/vim-which-key'
+    "Plug 'liuchengxu/vim-which-key'
     " Status Line
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
@@ -33,13 +35,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     " making stuff
     Plug 'neomake/neomake'
-
     " Vim Snippets
     Plug 'honza/vim-snippets'
+    " A Vim Plugin for Lively Previewing LaTeX PDF Output
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
     "--------- Color-schemes -----------
     " Themes 
     Plug 'joshdick/onedark.vim'
+    "Plug 'doums/darcula'
     "Add some color
     Plug 'junegunn/rainbow_parentheses.vim'
   

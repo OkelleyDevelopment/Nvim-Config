@@ -1,23 +1,8 @@
 #!/bin/bash
 
-# Author: Nicholas O'Kelley
-# A bash script to set up my neovim config
-# Date: August 2, 2020
-# Modified: August 29, 2020
-
-installpiponubuntu() { \
-  sudo apt install python3-pip -y > /dev/null
-}
-
-installpiponarch() { \
-  pacman -S python-pip
-}
-
 promptPipInstall() { \
     echo "pip not found. Installing now..."
-    [  -n "$(uname -a | grep Ubuntu)" ] && installpiponubuntu
-    [ -f "/etc/arch-release" ] && installpiponarch
-    
+    sudo apt install python3-pip -y
 } 
 
 installplugs() { \
@@ -35,21 +20,12 @@ promptNodeInstall() { \
 
 }
 
-installnodeubuntu(){ \
-    sudo apt install nodejs -y
-    sudo apt install npm -y
-    sudo npm i -g neovim   
-}
-
-installnodearch(){ \
-    sudo pacman -S nodejs
-    sudo pacman -S npm
-}
-
 installNode() { \
     echo "Installing nodejs..."
-    [  -n "$(uname -a | grep Ubuntu)" ] && installnodeubuntu
-    [ -f "/etc/arch-release" ] && installnodearch
+    sudo apt install nodejs -y
+    sudo apt install npm -y
+
+    sudo npm i -g neovim
 }
 
 installpynvim(){ \
@@ -74,10 +50,9 @@ installcocextensions() { \
 
 cloneNvimConfig() { \
     echo "Cloning Nikolai's Nvim Configuration"
-    #touch ~/.config/nvim
-    mkdir ~/.config/nvim/
-    git clone https://github.com/OkelleyDevelopment/Nvim-Configs ~/.config/nvim/
-    mv ~/.config/nvim/Nvim-configs/* ~/.config/nvim/.
+    touch ~/.config/nvim
+    git clone https://github.com/OkelleyDevelopment/Nvim-Configs ~/.config/
+    mv ~/.config/Nvim-Configs ~/.config/nvim
 }
 
 # Clear the screen
@@ -106,6 +81,9 @@ which nvim > /dev/null && installplugs
 
 # installs the plugin extensions
 installcocextensions
+
+# Extensions
+# echo "I recommend enabling the following CoC extensions:"
 
 # check health
 echo "Recommend running :checkHealth inside nvim to make sure everything is working"

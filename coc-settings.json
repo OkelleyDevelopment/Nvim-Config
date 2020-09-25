@@ -8,8 +8,7 @@
     "yaml",
     "json",
     "rust",
-    "python",
-    "java"
+    "python"
   ],
 
   // python config

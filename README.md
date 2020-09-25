@@ -1,6 +1,6 @@
 # Nikolai's Nvim Configuration
 
-![Nikolai Config](./util/title.png)
+![Nikolai Config](./util/images/title.png)
 
 ## Motivation
 
@@ -18,18 +18,18 @@ aspect of this development workflow.
 
 ## Prerequisites
 
-View the complete listing [here](./util/info/prereq.md)
+View the complete listing [here](./util/external_readmes/prereq.md)
 
 ## Setting up the Config
 
 Now that we have some of the needed tools for this config, which will also be
 useful for development purposes, we can clone the repo.
 
-Follow this initial [setup](./util/info/setup.md) file for instructions on directory layout.
+Follow this initial [setup](./util/external_readmes/setup.md) file for instructions on directory layout.
 
 ## Enable the PlugIns
 
-Follow [coc_setup.md](./util/info/coc_setup.md) for the instructions on setting up
+Follow [coc_setup.md](./util/external_readmes/coc_setup.md) for the instructions on setting up
 the plugins.
 
 ## Notable Syntax Support
@@ -55,17 +55,17 @@ plugins much _easier to maintain_.
 
 ## Adding Plugins
 
-If you would like to add more plugins simply follow the steps [here](./util/info/add_plugins.md)
+If you would like to add more plugins simply follow the steps [here](./util/external_readmes/add_plugins.md)
 
 ## Adding Themes
 
 We all have different opinions on the _best_ theme and can be done following
-the steps [here](./util/info/add_themes.md)
+the steps [here](./util/external_readmes/add_themes.md)
 
 ## Adding/Changing the Key Mappings
 
 Some of my key mappings might not be what you need and can easily be changed
-by looking at the steps [here](./util/info/key_mapping.md)
+by looking at the steps [here](./util/external_readmes/key_mapping.md)
 
 ## Custom Snippets
 

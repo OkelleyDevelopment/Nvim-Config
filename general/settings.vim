@@ -45,7 +45,7 @@ set colorcolumn=80                      " Sets the 80 char limit line
 " current line to a nice white color and 
 " text to a blue
 "function s:SetCursorLine()
- "   set cursorline
+  "  set cursorline
  "   hi cursorline cterm=none ctermbg=darkblue ctermfg=white
 "endfunction
 "autocmd VimEnter * call s:SetCursorLine()
