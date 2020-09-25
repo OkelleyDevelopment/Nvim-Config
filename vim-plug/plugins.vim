@@ -42,7 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "--------- Color-schemes -----------
     " Themes 
-    "Plug 'joshdick/onedark.vim'
+    Plug 'joshdick/onedark.vim'
+    "Plug 'doums/darcula'
     "Add some color
     Plug 'junegunn/rainbow_parentheses.vim'
   
