@@ -12,9 +12,9 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 
 " Theme Related Stuffs
-source $HOME/.config/nvim/themes/onedark.vim
+"source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/darcula.vim
-"source $HOME/.config/nvim/themes/monokai-pro.vim
+source $HOME/.config/nvim/themes/monokai-pro.vim
 "source $HOME/.config/nvim/themes/airline.vim
 
 " Extra Stuff

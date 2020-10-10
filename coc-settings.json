@@ -8,6 +8,8 @@
     "yaml",
     "json",
     "rust",
+
+    "shtml",
     "python"
   ],
 

@@ -50,6 +50,9 @@ set colorcolumn=80                      " Sets the 80 char limit line
 "endfunction
 "autocmd VimEnter * call s:SetCursorLine()
 
+"--------------- File Types -------------------------
+"autocmd BufNewFile,BufRead *.s set filetype=mips
+
 " ------------------ Status Line -------------------------------
 set statusline=
 "set statusline=%#PmenuSel#             " A nice blue color depends on theme
