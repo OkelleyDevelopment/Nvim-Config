@@ -22,7 +22,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ap/vim-css-color'
     " LaTeX Support
     Plug 'lervag/vimtex'
-
+    "Plug 'Harenome/vim-mipssyntax'
     "-------- Tools ---------
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,7 +31,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Status Line
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
-    " Shows signs for files in a git repo
+    " Shows edits in files that are added to GIT 
     Plug 'airblade/vim-gitgutter'
     " making stuff
     Plug 'neomake/neomake'
@@ -42,7 +42,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "--------- Color-schemes -----------
     " Themes 
-    Plug 'joshdick/onedark.vim'
+    "Plug 'joshdick/onedark.vim'
     "Plug 'doums/darcula'
     "Add some color
     Plug 'junegunn/rainbow_parentheses.vim'
