@@ -1,16 +1,16 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "css",
+    "java",
+    "rust",
+    "python",
     "markdown",
+    "html",
+    "shtml",
+    "css",
     "javascript",
     "graphql",
-    "html",
     "yaml",
-    "json",
-    "rust",
-
-    "shtml",
-    "python"
+    "json"
   ],
 
   // python config
