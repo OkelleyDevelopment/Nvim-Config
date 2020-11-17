@@ -8,9 +8,11 @@
     "yaml",
     "json",
     "rust",
-
+    "c",
+    "c++",
     "shtml",
-    "python"
+    "python",
+    "tex"
   ],
 
   // python config
@@ -25,7 +27,7 @@
   // explorer
   "explorer.width": 30,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },

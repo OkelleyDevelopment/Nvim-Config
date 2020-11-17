@@ -26,27 +26,31 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "-------- Tools ---------
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Vim Snippets
+    Plug 'honza/vim-snippets'
+    " Shows edits in files that are added to GIT 
+    Plug 'airblade/vim-gitgutter'
+    " A Vim Plugin for Lively Previewing LaTeX PDF Output
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+    " Making stuff
+    Plug 'neomake/neomake'
+    
     " Which-key
     "Plug 'liuchengxu/vim-which-key'
     " Status Line
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
-    " Shows edits in files that are added to GIT 
-    Plug 'airblade/vim-gitgutter'
-    " making stuff
-    Plug 'neomake/neomake'
-    " Vim Snippets
-    Plug 'honza/vim-snippets'
-    " A Vim Plugin for Lively Previewing LaTeX PDF Output
-    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
-    "--------- Color-schemes -----------
+    " Add some color
+    "Plug 'junegunn/rainbow_parentheses.vim'
+    
+    " --------- Color-schemes ----------- "
+    
     " Themes 
     "Plug 'joshdick/onedark.vim'
+    "Plug 'arcticicestudio/nord-vim'
+    Plug 'ghifarit53/tokyonight-vim'
     "Plug 'doums/darcula'
-    "Add some color
-    Plug 'junegunn/rainbow_parentheses.vim'
-  
+    
 call plug#end()
 
 
