@@ -44,11 +44,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'junegunn/rainbow_parentheses.vim'
     
     " --------- Color-schemes ----------- "
-    
-    " Themes 
     "Plug 'joshdick/onedark.vim'
     "Plug 'arcticicestudio/nord-vim'
-    Plug 'ghifarit53/tokyonight-vim'
+    "Plug 'ghifarit53/tokyonight-vim'
+    Plug 'sainnhe/forest-night'
+    "Plug 'ayu-theme/ayu-vim' 
     "Plug 'doums/darcula'
     
 call plug#end()
