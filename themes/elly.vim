@@ -1,0 +1,2 @@
+colorscheme elly
+set termguicolors
