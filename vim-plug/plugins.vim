@@ -35,18 +35,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Making stuff
     Plug 'neomake/neomake'
     
-    " Which-key
-    "Plug 'liuchengxu/vim-which-key'
     " Status Line
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
-    " Add some color
-    "Plug 'junegunn/rainbow_parentheses.vim'
     
     " --------- Color-schemes ----------- "
     "Plug 'joshdick/onedark.vim'
-    "Plug 'arcticicestudio/nord-vim'
-    Plug 'ghifarit53/tokyonight-vim'
+    Plug 'arcticicestudio/nord-vim'
+    "Plug 'ghifarit53/tokyonight-vim'
     "Plug 'ulwlu/elly.vim'
     "Plug 'sainnhe/forest-night'
     "Plug 'ayu-theme/ayu-vim' 
