@@ -4,17 +4,17 @@
 
 ## Motivation
 
-As a first time edeavor, this configuration is fairly simple and it is meant
-to be that way while still offering some gnarly features. I liked NeoVim for
-the simplicity, but wanted a few "addons" to improve my quality of life
+As a first time endeavor, this configuration is fairly simple and it is meant
+to be that way while still offering some handy features. I liked NeoVim for
+the simplicity, but wanted a few "add-ons" to improve my quality of life
 (such as HTML tag completion).
 
 This process also helped me learn about how defining shortcuts for vim/nvim work
 and the power of setting up various buffers to switch between files. Another
-feature that was super helpful was the `TAB` completion of snipets/file names and paths.
+feature that was super helpful was the `TAB` completion of snippets/file names and paths.
 
-NOTE: This will continue to be evolve as I shift my workflow and fine tune each individual
-aspect of this development workflow.
+NOTE: This will continue to be evolve as I shift my work-flow and fine tune each individual
+aspect of this development configuration.
 
 ## Prerequisites
 
@@ -27,14 +27,14 @@ useful for development purposes, we can clone the repo.
 
 Follow this initial [setup](./util/external_readmes/setup.md) file for instructions on directory layout.
 
-## Enable the PlugIns
+## Enable the Plugins
 
 Follow [coc_setup.md](./util/external_readmes/coc_setup.md) for the instructions on setting up
 the plugins.
 
 ## Notable Syntax Support
 
-With the above Plugins and coc services installed, you will have:
+With the above Plugins and CoC services installed, you will have:
 
 - Highlighted Text
 - CSS preview
@@ -70,7 +70,7 @@ by looking at the steps [here](./util/external_readmes/key_mapping.md)
 ## Custom Snippets
 
 This is easily one of the coolest parts of this setup. Coc-snippets allows the user
-to have access to a wide range of code snippets (common ops in the langs).
+to have access to a wide range of code snippets (common operations/setups in various languages).
 
 Check [this](https://github.com/neoclide/coc-snippets) link to learn more.
 
@@ -82,10 +82,4 @@ with the following naming scheme:
 ```
 
 Then adding the snippet is a matter of following the instructions on the coc-snippets
-github.
-
-## TODO
-
-- Custom theme with similar color scheme to Nord
-- Spell Checker
-- Shell script to install the needed dependancies
+GitHub.
