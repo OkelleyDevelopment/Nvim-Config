@@ -18,8 +18,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Plugin to deal with URL Highlight URLs inside vim
     Plug 'itchyny/vim-highlighturl'
-    " Displays a preview of colors with CSS
-    Plug 'ap/vim-css-color'
     " LaTeX Support
     Plug 'lervag/vimtex'
     "Plug 'Harenome/vim-mipssyntax'
