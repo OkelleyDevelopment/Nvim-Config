@@ -77,7 +77,8 @@ installcocextensions() { \
 
 cloneNvimConfig() { \
     echo "Cloning Nikolai's Nvim Config"
-    git clone https://github.com/OkelleyDevelopment/Nvim-Config ~/.config/nvim/
+    git clone https://github.com/OkelleyDevelopment/Nvim-Config ~/.config/
+    mv ~/.config/Nvim-Config ~/.config/nvim/
 }
 
 # Clear the screen
