@@ -1,0 +1,3 @@
+set termguicolors
+
+colorscheme horizon

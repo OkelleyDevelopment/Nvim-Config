@@ -1,4 +1,4 @@
-# Nikolai's Nvim Configuration
+# Nvim Config
 
 ![Nikolai Config](./util/images/title.png)
 
@@ -18,7 +18,9 @@ aspect of this development configuration.
 
 ## Prerequisites
 
-View the complete listing [here](./util/external_readmes/prereq.md)
+Have the following installed:
+
+- NeoVim
 
 ## Setting up the Config
 

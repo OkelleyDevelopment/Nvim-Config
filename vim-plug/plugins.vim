@@ -6,7 +6,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     "--------- Syntax Support ------------
@@ -22,29 +21,27 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lervag/vimtex'
     "Plug 'Harenome/vim-mipssyntax'
     "-------- Tools ---------
-    " Intellisense
+    " Shows edits in files that are added to GIT 
+    Plug 'airblade/vim-gitgutter'
+  " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Vim Snippets
     Plug 'honza/vim-snippets'
-    " Shows edits in files that are added to GIT 
-    Plug 'airblade/vim-gitgutter'
     " A Vim Plugin for Lively Previewing LaTeX PDF Output
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     " Making stuff
     Plug 'neomake/neomake'
     
-    " Status Line
-    "Plug 'vim-airline/vim-airline'
-    "Plug 'vim-airline/vim-airline-themes'
-    
     " --------- Color-schemes ----------- "
     "Plug 'joshdick/onedark.vim'
-    Plug 'arcticicestudio/nord-vim'
+    "Plug 'arcticicestudio/nord-vim'
     "Plug 'ghifarit53/tokyonight-vim'
     "Plug 'ulwlu/elly.vim'
     "Plug 'sainnhe/forest-night'
+    "Plug 'ntk148v/vim-horizon'
     "Plug 'ayu-theme/ayu-vim' 
     "Plug 'doums/darcula'
+    Plug 'ajmwagar/vim-deus'
     
 call plug#end()
 
