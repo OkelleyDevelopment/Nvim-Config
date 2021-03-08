@@ -1,10 +1,11 @@
 snippet meta(data)? "Markdown metadata front matter" br
 ---
-title: $1
+path: "$1"
+title: $2
 date: "`!v strftime("%Y-%m-%d")`"
-image: "$2"
-author: "$3"
-tags: [$4]
+except: "$3"
+author: "$4"
+tags: [$5]
 ---
 endsnippet
 
@@ -21,4 +22,8 @@ snippet readme "Default README headings" b
 
 ## Future Goals/Project Reflection
 
+endsnippet
+
+snippet image "Markdown Image format" b
+![$1]("$2")
 endsnippet

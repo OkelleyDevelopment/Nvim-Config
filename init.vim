@@ -13,11 +13,13 @@ source $HOME/.config/nvim/plug-config/coc.vim
 
 " Theme Related Stuffs
 "source $HOME/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/themes/deus.vim
+"source $HOME/.config/nvim/themes/horizon.vim
 "source $HOME/.config/nvim/themes/elly.vim
 "source $HOME/.config/nvim/themes/forest-night.vim
 "source $HOME/.config/nvim/themes/tokyonight.vim
 "source $HOME/.config/nvim/themes/ayu.vim
-source $HOME/.config/nvim/themes/nord.vim
+"source $HOME/.config/nvim/themes/nord.vim
 "source $HOME/.config/nvim/themes/darcula.vim
 "source $HOME/.config/nvim/themes/monokai-pro.vim
 "source $HOME/.config/nvim/themes/airline.vim
@@ -25,6 +27,4 @@ source $HOME/.config/nvim/themes/nord.vim
 " Extra Stuff
 source $HOME/.config/nvim/plug-config/vimtex.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
-"source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
-"source $HOME/.config/nvim/keys/which-key.vim

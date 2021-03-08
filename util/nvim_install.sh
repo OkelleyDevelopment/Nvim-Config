@@ -3,7 +3,10 @@
 # Author: Nicholas O'Kelley
 # A bash script to set up my neovim config
 # Date: August 2, 2020
-# Modified: August 29, 2020
+# Last Modified: Jan 21, 2021
+
+set -o nounset # error when reference to undefined variables
+set -o errexit # error out of the script
 
 installpiponubuntu() { \
   sudo apt install python3-pip -y > /dev/null
@@ -73,11 +76,9 @@ installcocextensions() { \
 }
 
 cloneNvimConfig() { \
-    echo "Cloning Nikolai's Nvim Configuration"
-    #touch ~/.config/nvim
-    mkdir ~/.config/nvim/
-    git clone https://github.com/OkelleyDevelopment/Nvim-Configs ~/.config/nvim/
-    mv ~/.config/nvim/Nvim-configs/* ~/.config/nvim/.
+    echo "Cloning Nikolai's Nvim Config"
+    git clone https://github.com/OkelleyDevelopment/Nvim-Config ~/.config/
+    mv ~/.config/Nvim-Config ~/.config/nvim/
 }
 
 # Clear the screen
