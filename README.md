@@ -1,73 +1,138 @@
-# Nvim Config
+# Nikolai's Nvim Config
 
 ![Nikolai Config](./util/images/title.png)
 
 ## Motivation
 
-As a first time endeavor, this configuration is fairly simple and it is meant
-to be that way while still offering some handy features. I liked NeoVim for
-the simplicity, but wanted a few "add-ons" to improve my quality of life
-(such as HTML tag completion).
+My NeoVim setup that is meant to improve some quality of life functionality while still
+retaining the overall sleekness the NeoVim offers.
 
-This process also helped me learn about how defining shortcuts for vim/nvim work
-and the power of setting up various buffers to switch between files. Another
-feature that was super helpful was the `TAB` completion of snippets/file names and paths.
+This process helped me learn more about various aspects of this program such as defining shortcuts
+and control remapping. Another powerful feature was defining `TAB` completion of the
+snippets and paths.
 
-NOTE: This will continue to be evolve as I shift my work-flow and fine tune each individual
-aspect of this development configuration.
+### NOTE:
+
+This configuration is by no means perfect and will continue to be updated as my work-flow
+evolves.
 
 ## Prerequisites
 
-Have the following installed:
+You will need the following installed:
 
 - NeoVim
+  ```sh
+      sudo apt install neovim
+  ```
+- NPM
+  ```sh
+  sudo apt install npm
+  ```
+- PIP
 
-## Setting up the Config
+```sh
+sudo apt install python3-pip
+```
 
-Now that we have some of the needed tools for this config, which will also be
-useful for development purposes, we can clone the repo.
+- Python and Node Support
 
-Follow this initial [setup](./util/external_readmes/setup.md) file for instructions on directory layout.
+```sh
+pip install pynvim
 
-## Enable the Plugins
+npm i -g neovim
+```
 
-Follow [coc_setup.md](./util/external_readmes/coc_setup.md) for the instructions on setting up
-the plugins.
+- VimPlug
 
-## Notable Syntax Support
+```sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
-With the above Plugins and CoC services installed, you will have:
+- Clang
 
-- Highlighted Text
-- CSS preview
-- Tag Completion
-- Python Syntax Checking
-- JavaScript/TypeScript checking
-- Java syntax checking
-- Auto-pairing of braces/parenthesis
-- Auto URL highlighter
+## Setting the Config
 
-## Organization
+Inside `~/.config/`, run the commands:
 
-To help make things more organized, each "task" is in its own directory
-and then sourced from that directory in the `init.vim` file.
+```sh
+mkdir nvim
 
-This pattern will make adding new plugins and or configurations to existing
-plugins much _easier to maintain_.
+git clone https://github.com/OkelleyDevelopment/Nvim-Configs.git
+
+mv ~/.config/Nvim-Configs/* ~/.config/nvim/
+```
+
+Ensure the `.git` folder moved over too and you will have the needed assets.
+
+### Enable Plugins
+
+Inside `/.config/nvim/`, open `./vim-plug/plugins.vim` and run
+
+```sh
+:PlugInstall
+```
+
+Upon neovim restart the plugins will be enabled.
+
+## Syntax Support
+
+To enable the proper syntax support,
+
+```sh
+:CocInstall <plugin name here>
+```
+
+Followed by any/all the following
+
+- coc-yaml
+- coc-tsserver
+- coc-tslint
+- coc-sh
+- coc-rls
+- coc-python
+- coc-java
+- coc-html
+- coc-explorer
+- coc-css
+- coc-clnagd
+- coc-prettier
+- coc-snippets
+
+NOTE: If you wish to see what CoC extensions exist run this:
+
+```
+:CocInstall coc-marketplace
+
+:CocList marketplace
+```
 
 ## Adding Plugins
 
-If you would like to add more plugins simply follow the steps [here](./util/external_readmes/add_plugins.md)
+1. Locate your chosen plugin's plug command
+2. Add it to the file in `./vim-plug/plugins.vim`
+3. Save and quit
+4. Make any plugin specific configurations in `./plug-config/` and source in
+   `./init.vim`
+5. Then run the command `:PlugInstall`
+   - Note: My file has an autoload function when opening Nvim, so
+     you may not have to run that command explicitly
 
 ## Adding Themes
 
-We all have different opinions on the _best_ theme and can be done following
-the steps [here](./util/external_readmes/add_themes.md)
+1. Locate the `Plug` command for the theme
+2. Add it to the file in `./vim-plug/plugins.vim`
+3. Save and quit
+4. Make any plugin specifc configurations in ` ./themes/``<name of theme>.vim ` and source in
+   `./init.vim`
 
-## Adding/Changing the Key Mappings
+## Key Mappings
 
-Some of my key mappings might not be what you need and can easily be changed
-by looking at the steps [here](./util/external_readmes/key_mapping.md)
+All the key mappings are sourced through `init.vim` and can be easily remapped
+in the
+`./keys/`
+directory.
+
+For help learning how to map keys check out this [article](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed).
 
 ## Custom Snippets
 

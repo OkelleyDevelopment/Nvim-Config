@@ -31,6 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     " Making stuff
     Plug 'neomake/neomake'
+
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     
     " --------- Color-schemes ----------- "
     "Plug 'joshdick/onedark.vim'
