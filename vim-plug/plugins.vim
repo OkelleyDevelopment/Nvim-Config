@@ -44,6 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'ayu-theme/ayu-vim' 
     "Plug 'doums/darcula'
     Plug 'ajmwagar/vim-deus'
+    "Plug 'whatyouhide/vim-gotham'
     
 call plug#end()
 

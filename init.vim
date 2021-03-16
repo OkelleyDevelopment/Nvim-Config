@@ -14,6 +14,7 @@ source $HOME/.config/nvim/plug-config/coc.vim
 " Theme Related Stuffs
 "source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/themes/deus.vim
+"source $HOME/.config/nvim/themes/gotham.vim
 "source $HOME/.config/nvim/themes/horizon.vim
 "source $HOME/.config/nvim/themes/elly.vim
 "source $HOME/.config/nvim/themes/forest-night.vim
