@@ -16,6 +16,12 @@ snippets and paths.
 This configuration is by no means perfect and will continue to be updated as my work-flow
 evolves.
 
+## A fancy one-liner
+
+```sh
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Config/master/util/install.sh)
+```
+
 ## Prerequisites
 
 You will need the following installed:
