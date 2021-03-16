@@ -3,7 +3,7 @@
 # Author: Nicholas O'Kelley
 # A bash script to set up my neovim config
 # Date: August 2, 2020
-# Last Modified: Jan 21, 2021
+# Last Modified: March 16, 2021
 
 set -o nounset # error when reference to undefined variables
 set -o errexit # error out of the script
@@ -77,7 +77,7 @@ installcocextensions() { \
 
 cloneNvimConfig() { \
     echo "Cloning Nikolai's Nvim Config"
-    git clone https://github.com/OkelleyDevelopment/Nvim-Config ~/.config/
+    git clone https://github.com/OkelleyDevelopment/Nvim-Config ~/.config/Nvim-Config
     mv ~/.config/Nvim-Config ~/.config/nvim/
 }
 
