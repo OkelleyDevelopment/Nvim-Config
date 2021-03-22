@@ -32,8 +32,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Making stuff
     Plug 'neomake/neomake'
 
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    
     " --------- Color-schemes ----------- "
     "Plug 'joshdick/onedark.vim'
     "Plug 'arcticicestudio/nord-vim'
