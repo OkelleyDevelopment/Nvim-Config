@@ -41,7 +41,10 @@ promptNodeInstall() { \
 installnodeubuntu(){ \
     sudo apt install nodejs -y
     sudo apt install npm -y
-    sudo npm i -g neovim   
+    mkdir ~/.npm-global
+    npm config set prefix '~/.npm-global'
+    echo export PATH=~/.npm-global/bin:$PATH >> ~/.profile;  
+    source ~/.profile
 }
 
 installnodearch(){ \
@@ -72,7 +75,7 @@ installcocextensions() { \
   [ ! -f package.json ] && echo '{"dependencies":{}}'> package.json
   # Change extension names to the extensions you need
   # sudo npm install coc-explorer coc-snippets coc-json coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  sudo npm install coc-prettier coc-html coc-rust-analyzer coc-sh coc-tslint coc-python coc-css coc-yaml coc-tsserver coc-explorer coc-snippets coc-json coc-marketplace coc-java coc-clangd --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-prettier coc-html coc-rls coc-rust-analyzer coc-sh coc-tslint coc-python coc-css coc-yaml coc-tsserver coc-explorer coc-snippets coc-json coc-marketplace coc-java coc-clangd --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 }
 
 cloneNvimConfig() { \
