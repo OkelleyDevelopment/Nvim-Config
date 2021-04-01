@@ -41,7 +41,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'ntk148v/vim-horizon'
     "Plug 'ayu-theme/ayu-vim' 
     "Plug 'doums/darcula'
-    Plug 'ajmwagar/vim-deus'
+    "Plug 'ajmwagar/vim-deus'
+    Plug 'drewtempelmeyer/palenight.vim'
+    "Plug 'jaredgorski/spacecamp'
     
 call plug#end()
 
