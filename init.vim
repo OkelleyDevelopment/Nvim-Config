@@ -14,11 +14,11 @@ source $HOME/.config/nvim/plug-config/coc.vim
 " Theme Related Stuffs
 "source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/deus.vim
-source $HOME/.config/nvim/themes/palenight.vim
+"source $HOME/.config/nvim/themes/palenight.vim
 "source $HOME/.config/nvim/themes/horizon.vim
 "source $HOME/.config/nvim/themes/elly.vim
 "source $HOME/.config/nvim/themes/forest-night.vim
-"source $HOME/.config/nvim/themes/tokyonight.vim
+source $HOME/.config/nvim/themes/tokyonight.vim
 "source $HOME/.config/nvim/themes/ayu.vim
 "source $HOME/.config/nvim/themes/nord.vim
 "source $HOME/.config/nvim/themes/darcula.vim

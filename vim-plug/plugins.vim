@@ -32,17 +32,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Making stuff
     Plug 'neomake/neomake'
 
+
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
     " --------- Color-schemes ----------- "
     "Plug 'joshdick/onedark.vim'
     "Plug 'arcticicestudio/nord-vim'
-    "Plug 'ghifarit53/tokyonight-vim'
+    Plug 'ghifarit53/tokyonight-vim'
     "Plug 'ulwlu/elly.vim'
     "Plug 'sainnhe/forest-night'
     "Plug 'ntk148v/vim-horizon'
     "Plug 'ayu-theme/ayu-vim' 
     "Plug 'doums/darcula'
     "Plug 'ajmwagar/vim-deus'
-    Plug 'drewtempelmeyer/palenight.vim'
+    "Plug 'drewtempelmeyer/palenight.vim'
     "Plug 'jaredgorski/spacecamp'
     
 call plug#end()
