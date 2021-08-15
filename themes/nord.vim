@@ -1,2 +1,0 @@
-colorscheme nord
-set termguicolors
