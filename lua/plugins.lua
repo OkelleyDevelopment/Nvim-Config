@@ -17,9 +17,41 @@ return require('packer').startup(function()
     -- Packer to maintain itself
     use {'wbthomason/packer.nvim', opt = true}
 
+    -- File browser
+    use "kyazdani42/nvim-web-devicons"
+    use {'tamago324/lir.nvim', 
+           requires = {
+               {'kyazdani42/nvim-web-devicons'},
+               {'tamago324/lir-git-status.nvim'},
+               {'nvim-lua/plenary.nvim'},
+           },
+           config = function()
+               require('plugins.nv_lir')
+           end,
+           disabled = false
+        }
+
+    -- Git integration
+    use {'nvim-lua/plenary.nvim'}
+    use {
+          'lewis6991/gitsigns.nvim',
+          requires = {
+            'nvim-lua/plenary.nvim'
+          },
+          config = function()
+            require('gitsigns').setup()
+          end
+        }
 
 
-    -- Themes 
+    -- LSP and completion
+    use { 'neovim/nvim-lspconfig' }
+    use { 'nvim-lua/completion-nvim' }
+
+    ----- Themes -----
+    -- Rose-pine
     use({ 'rose-pine/neovim', as = 'rose-pine'})
+    -- Nord
+    use 'shaunsingh/nord.nvim'
 
 end)

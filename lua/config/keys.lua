@@ -10,5 +10,10 @@ utils.map('n', '<c-u>', '<Esc>viwUi')
 
 -- TAB in normal mode will move to the next buffer
 utils.map('n', '<TAB>', ':bnext<CR>')
+
 -- SHIFT + TAB will go back a buffer
 utils.map('n', '<S-TAB>', ':bnext<CR>')
+
+-- Better block tabbing
+utils.map('v', '<', '<gv')
+utils.map('v', '>', '>gv')

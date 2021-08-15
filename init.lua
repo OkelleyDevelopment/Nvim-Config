@@ -9,8 +9,6 @@
 
 -- Source All the time
 require('plugins')
-require("settings")
-require("keymappings")
-require('themes')
-
--- Extra bits
+require("config.settings")
+require("config.keys")
+require('config.themes')
